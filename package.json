@@ -1,0 +1,28 @@
+{
+  "name": "customer-support",
+  "version": "1.0.0",
+  "description": "Prototype for customer support app for neat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index"
+  },
+  "author": "Aflal",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.26.3",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^82.0.0",
+    "got": "^11.8.2",
+    "joi": "^17.4.1",
+    "method-override": "^3.0.0",
+    "moment-timezone": "^0.5.33",
+    "mongoose": "^5.13.3",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.6.3"
+  }
+}

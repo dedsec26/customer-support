@@ -1,0 +1,32 @@
+<%- layout('layouts/boilerplate') %> 
+    <title>Tickets</title>
+  </head>
+  <body>
+    <div class="row w-100">
+      <h1 class="text-center mt-3">All Tickets</h1>
+      <div class="col-6 offset-3 mt-3">
+        <div class="col-3">
+          <div class="btn-group mb-3" role="group">
+            <button id="btngrp" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Websites</button>
+            <ul class="dropdown-menu" aria-labelledby="btngrp">
+              <% for(let w of websites){  %>
+                <li><a href="/tickets/sort?id=<%= w.id %> " class="dropdown-item"><%= w.name %> </a></li>
+                <%}  %> 
+            </ul>
+          </div>
+        </div>
+        <% for (let t of tickets){ %>
+          <div class="card mb-5">
+            <img class="img-fluid card-img-top" src="<%= t.img %> " alt="" />
+            <div class="card-body">
+              <h5 class="card-title"><%= t.name %></h5>
+              <h6 class="card-subtitle"><%= t.website.name %></h6>
+              <p class="card-text"><%= t.issue %></p>
+              <p class="card-subtitle">Sri Lankan Time: <%= t.datesl %></p>
+              <p class="card-subtitle">Australian Time: <%= t.dateau %></p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
